@@ -3,8 +3,12 @@
   ml-5">Crud App</h1>
 </div>
 
-<div class="h-[40rem] w-full bg-slate-400 text-black">
-  <form>
-
+<div class="h-[40rem] w-full bg-slate-400 text-black flex flex-col items-center gap-2">
+  <form [formGroup]="userForm" class="flex flex-col gap-3">
+    <input type="text" formControlName="firstName">
+    <input type="text" formControlName="lastName">
+    <input type="email" formControlName="email">
+    <input type="text" formControlName="rollNo">
+    <button type="submit" (click)="createUser()">create</button>
   </form>
 </div>
